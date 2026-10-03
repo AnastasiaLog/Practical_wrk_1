@@ -7,6 +7,8 @@ def act(a):
   if b[0] == "ls":
     return f"Команда: ls, Аргументы: {b[1:]}"
   elif b[0] == "cd":
+    if len(b) > 2:
+      return "cd: too many arguments"
     return f"Команда: cd, Аргументы: {b[1:]}"
   else:
     return f"{b[0]}: command not found"
