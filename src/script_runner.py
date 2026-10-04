@@ -1,6 +1,6 @@
 from VFS_emulator import act
 
-def run_script(path, prompt):
+def run_script(path, prompt, vfs=None):
     try:
         f = open(path, encoding="utf-8")
     except FileNotFoundError:
@@ -14,7 +14,7 @@ def run_script(path, prompt):
                 continue
             print(f"{prompt}{line}")
             try:
-                result = act(line)
+                result = act(line, vfs)
                 if result:
                     print(result)
             except SystemExit:
