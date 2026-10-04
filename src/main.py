@@ -25,7 +25,7 @@ if __name__ == "__main__":
     vfs = VFS()
 
   if args.script:
-    run_script(args.script, args.prompt)
+    run_script(args.script, args.prompt, vfs)
   while True:
     a = input(args.prompt)
-    print(act(a))
+    print(act(a, vfs))
