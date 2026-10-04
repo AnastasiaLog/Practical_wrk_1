@@ -1,0 +1,7 @@
+path,type,content
+/,dir,
+/home,dir,
+/home/notes.txt,file,Hello world
+/home/readme.md,file,README content
+/tmp,dir,
+/tmp/log.txt,file,log entry

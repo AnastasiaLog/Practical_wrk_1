@@ -1,0 +1,10 @@
+path,type,content
+/,dir,
+/a,dir,
+/a/b,dir,
+/a/b/c,dir,
+/a/b/c/deep.txt,file,deep file
+/home,dir,
+/home/user,dir,
+/home/user/docs,dir,
+/home/user/docs/note.txt,file,note
