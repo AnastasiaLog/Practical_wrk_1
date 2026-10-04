@@ -6,7 +6,7 @@ ls /tmp
 # wc, echo, find
 wc /home/notes.txt
 echo hello world
-find note.txt
+find notes.txt
 # ошибки
 cd /no_such_dir
 wc /no_such_file
