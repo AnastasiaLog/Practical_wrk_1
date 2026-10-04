@@ -1,7 +1,15 @@
 # Стартовый скрипт для теста
 ls
 cd /home
-# Пропуск
+# Пропуск комментария
 ls /home
 echo hello
+# Работа с VFS
+ls /tmp
+cd /tmp
+ls /tmp/log.txt
+# Обработка ошибок
+cd /no_such_dir
+foo
+cd /a /b
 exit
