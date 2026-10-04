@@ -1,15 +1,16 @@
-# Стартовый скрипт для теста
+# стартовый скрипт
 ls
 cd /home
-# Пропуск комментария
 ls /home
-echo hello
-# Работа с VFS
 ls /tmp
-cd /tmp
-ls /tmp/log.txt
-# Обработка ошибок
+# wc, echo, find
+wc /home/notes.txt
+echo hello world
+find note.txt
+# ошибки
 cd /no_such_dir
-foo
+wc /no_such_file
+find
 cd /a /b
+foo
 exit
