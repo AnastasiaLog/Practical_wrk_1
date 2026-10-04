@@ -1,0 +1,3 @@
+@echo off
+cd /d "%~dp0.."
+python src\main.py --vfs vfs\minimal.json --prompt "my_vfs> " --script scripts\start.txt

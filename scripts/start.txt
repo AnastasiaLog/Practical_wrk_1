@@ -1,0 +1,7 @@
+# Стартовый скрипт для теста
+ls
+cd /home
+# Пропуск
+ls /home
+echo hello
+exit
