@@ -1,3 +1,3 @@
 @echo off
 cd /d "%~dp0.."
-python src\main.py --vfs vfs\minimal.json
+python src\main.py --vfs vfs\minimal.csv
