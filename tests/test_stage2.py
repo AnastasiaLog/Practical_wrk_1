@@ -14,8 +14,8 @@ from script_runner import run_script
 class TestParseArgs(unittest.TestCase):
 
     def test_parse_vfs(self):
-        sys.argv = ["main.py", "--vfs", "vfs/minimal.json"]
-        self.assertEqual(parse_args().vfs, "vfs/minimal.json")
+        sys.argv = ["main.py", "--vfs", "vfs/minimal.csv"]
+        self.assertEqual(parse_args().vfs, "vfs/minimal.csv")
 
     def test_parse_prompt(self):
         sys.argv = ["main.py", "--prompt", "custom> "]
