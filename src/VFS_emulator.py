@@ -50,6 +50,17 @@ def act(a, vfs=None):
     _find_rec(vfs.root, "/", args[0], result)
     return "\n".join(result)
 
+  elif cmd == "mkdir":
+    if vfs is None:
+      return f"Команда: mkdir, Аргументы: {args}"
+    if not args:
+      return "mkdir: missing argument"
+    try:
+      vfs.mkdir(args[0])
+      return ""
+    except (FileNotFoundError, FileExistsError, ValueError) as e:
+      return str(e)
+
   else:
     return f"{cmd}: command not found"
 
