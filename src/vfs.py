@@ -65,3 +65,17 @@ class VFS:
         if node["type"] != "dir":
             raise NotADirectoryError(f"cd: {path}: not a directory")
         self.cwd = path
+
+    def mkdir(self, path):
+        if path in ("/", ""):
+            raise ValueError("mkdir: cannot create root")
+        parts = [p for p in path.split("/") if p]
+        node = self.root
+        for part in parts[:-1]:
+            if part not in node.get("children", {}):
+                raise FileNotFoundError(f"mkdir: {path}: no such directory")
+            node = node["children"][part]
+        name = parts[-1]
+        if name in node["children"]:
+            raise FileExistsError(f"mkdir: {path}: already exists")
+        node["children"][name] = {"name": name, "type": "dir", "children": {}}
