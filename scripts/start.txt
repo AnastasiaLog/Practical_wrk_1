@@ -7,7 +7,12 @@ ls /tmp
 wc /home/notes.txt
 echo hello world
 find notes.txt
+# mkdir
+mkdir /home/newdir
+ls /home
+mkdir /home/newdir
 # ошибки
+ls /no_such_dir
 cd /no_such_dir
 wc /no_such_file
 find
